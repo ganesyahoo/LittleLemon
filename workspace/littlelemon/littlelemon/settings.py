@@ -78,11 +78,7 @@ WSGI_APPLICATION = 'littlelemon.wsgi.application'
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    },
-    'mydb': {   
+    'default': {   
  
         'ENGINE': 'django.db.backends.mysql',   
         'NAME': 'LittleLemon',   
@@ -93,7 +89,12 @@ DATABASES = {
         'OPTIONS': {   
             'init_command': "SET sql_mode='STATIC_TRANS_TABLES'"   
         }
+    },
+    'sqllite': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
+    
 }
 
 
